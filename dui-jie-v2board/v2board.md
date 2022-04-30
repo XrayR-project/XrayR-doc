@@ -15,6 +15,18 @@ v2board需要在传输协议配置中增加以下内容，配置ws的路径：
 ```
 其中`"name"`换成任意字符串，可用于nginx等反代分流。
 
+### 对接vmess+ws+tls
+v2board需要在传输协议配置中增加以下内容，配置ws的路径和tls的域名：
+```
+{
+  "path": "/",
+  "headers": {
+    "Host": "v2ray.com"
+  }
+}
+```
+其中`"name"`换成任意字符串，可用于nginx等反代分流，`"Host"`后面的域名更改为自己的伪装域名。
+
 ### 对接vmess+grpc
 
 为了成功支持clash连接，在对接vmess+grpc时，v2board需要在传输协议配置中增加如下内容：
