@@ -1,6 +1,6 @@
 # 对接新版SSPanel Custom Config
 
-对于sspanel >= 2021.11的版本中自动启用Custom_config的配置方法，请查看以下配置，正确配置结点信息。关于订阅相关信息，请查看SSPanel相关文档：https://wiki.sspanel.org/#/universal-subscription。
+对于sspanel >= 2021.11的版本中自动启用Custom_config的配置方法，请查看以下配置，正确配置结点信息。关于订阅相关信息，请查看[SSPanel相关文档](https://wiki.sspanel.org/#/universal-subscription)。
 如果不想使用custom config，请在`ApiConfig`中将`DisableCustomConfig`设为`true`。
 
 # Shadowsocks
