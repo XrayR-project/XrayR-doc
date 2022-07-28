@@ -1,0 +1,649 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>为什么要引入Shadowsocks - V2Ray-Plugin · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="nginx+trojan-zan-shi-di-shen.html" />
+    
+    
+    <link rel="prev" href="memopt.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于XrayR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">XrayR下载和安装</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../xrayr-xia-zai-he-an-zhuang/install/">
+            
+                <a href="../xrayr-xia-zai-he-an-zhuang/install/">
+            
+                    
+                    下载和安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../xrayr-xia-zai-he-an-zhuang/install/one-click.html">
+            
+                <a href="../xrayr-xia-zai-he-an-zhuang/install/one-click.html">
+            
+                    
+                    使用一键脚本安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../xrayr-xia-zai-he-an-zhuang/install/docker.html">
+            
+                <a href="../xrayr-xia-zai-he-an-zhuang/install/docker.html">
+            
+                    
+                    使用docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../xrayr-xia-zai-he-an-zhuang/install/manual.html">
+            
+                <a href="../xrayr-xia-zai-he-an-zhuang/install/manual.html">
+            
+                    
+                    手动安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">XrayR配置文件说明</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../xrayr-pei-zhi-wen-jian-shuo-ming/config.html">
+            
+                <a href="../xrayr-pei-zhi-wen-jian-shuo-ming/config.html">
+            
+                    
+                    配置文件说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对接SSpanel</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../dui-jie-sspanel/sspanel/">
+            
+                <a href="../dui-jie-sspanel/sspanel/">
+            
+                    
+                    基本对接配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../dui-jie-sspanel/sspanel/sspanel_custom_config.html">
+            
+                <a href="../dui-jie-sspanel/sspanel/sspanel_custom_config.html">
+            
+                    
+                    对接新版SSPanel Custom Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../dui-jie-sspanel/sspanel/v2ray.html">
+            
+                <a href="../dui-jie-sspanel/sspanel/v2ray.html">
+            
+                    
+                    对接V2ray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../dui-jie-sspanel/sspanel/trojan.html">
+            
+                <a href="../dui-jie-sspanel/sspanel/trojan.html">
+            
+                    
+                    对接Trojan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../dui-jie-sspanel/sspanel/shadowsocks.html">
+            
+                <a href="../dui-jie-sspanel/sspanel/shadowsocks.html">
+            
+                    
+                    对接Shadowsocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../dui-jie-sspanel/sspanel/dui-jie-shadowsocks-v2rayplugin.html">
+            
+                <a href="../dui-jie-sspanel/sspanel/dui-jie-shadowsocks-v2rayplugin.html">
+            
+                    
+                    对接Shadowsocks - V2Ray-Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对接V2board</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../dui-jie-v2board/v2board.html">
+            
+                <a href="../dui-jie-v2board/v2board.html">
+            
+                    
+                    基本对接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对接PMPanel</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../dui-jie-pmpanel/ji-ben-dui-jie-pei-zhi.html">
+            
+                <a href="../dui-jie-pmpanel/ji-ben-dui-jie-pei-zhi.html">
+            
+                    
+                    基本对接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对接ProxyPanel</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../dui-jie-proxypanel/ji-ben-dui-jie-pei-zhi.html">
+            
+                <a href="../dui-jie-proxypanel/ji-ben-dui-jie-pei-zhi.html">
+            
+                    
+                    基本对接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">功能说明</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../gong-neng-shuo-ming/speedlimit.html">
+            
+                <a href="../gong-neng-shuo-ming/speedlimit.html">
+            
+                    
+                    限速功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../gong-neng-shuo-ming/devicelimit.html">
+            
+                <a href="../gong-neng-shuo-ming/devicelimit.html">
+            
+                    
+                    设备连接限制功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../gong-neng-shuo-ming/dns.html">
+            
+                <a href="../gong-neng-shuo-ming/dns.html">
+            
+                    
+                    自定义DNS说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../gong-neng-shuo-ming/zi-ding-yi-lu-you-gong-neng-shuo-ming.html">
+            
+                <a href="../gong-neng-shuo-ming/zi-ding-yi-lu-you-gong-neng-shuo-ming.html">
+            
+                    
+                    自定义路由功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../gong-neng-shuo-ming/zi-ding-yi-ru-kou-gong-neng-shuo-ming.html">
+            
+                <a href="../gong-neng-shuo-ming/zi-ding-yi-ru-kou-gong-neng-shuo-ming.html">
+            
+                    
+                    自定义入口功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../gong-neng-shuo-ming/zi-ding-yi-chu-kou-gong-neng-shuo-ming.html">
+            
+                <a href="../gong-neng-shuo-ming/zi-ding-yi-chu-kou-gong-neng-shuo-ming.html">
+            
+                    
+                    自定义出口功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../gong-neng-shuo-ming/rule.html">
+            
+                <a href="../gong-neng-shuo-ming/rule.html">
+            
+                    
+                    审计功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="../gong-neng-shuo-ming/cert.html">
+            
+                <a href="../gong-neng-shuo-ming/cert.html">
+            
+                    
+                    自动申请证书说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="../gong-neng-shuo-ming/fallback.html">
+            
+                <a href="../gong-neng-shuo-ming/fallback.html">
+            
+                    
+                    Fallback 功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">杂项</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="memopt.html">
+            
+                <a href="memopt.html">
+            
+                    
+                    内存优化相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="9.2" data-path="wei-shen-me-yao-yin-ru-shadowsocks-v2rayplugin.html">
+            
+                <a href="wei-shen-me-yao-yin-ru-shadowsocks-v2rayplugin.html">
+            
+                    
+                    为什么要引入Shadowsocks - V2Ray-Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="nginx+trojan-zan-shi-di-shen.html">
+            
+                <a href="nginx+trojan-zan-shi-di-shen.html">
+            
+                    
+                    Nginx+Trojan暂时滴神！
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >为什么要引入Shadowsocks - V2Ray-Plugin</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5F15;&#x5165;shadowsocks---v2ray-plugin">&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5F15;&#x5165;Shadowsocks - V2Ray-Plugin</h1>
+<h2 id="update-on-20210704">Update on 2021/07/04</h2>
+<p>&#x6211;&#x9519;&#x602A;Trojan&#x4E86;&#xFF0C;&#x901A;&#x8FC7;&#x540E;&#x7AEF;&#x7981;&#x7528;TLS&#xFF0C;&#x914D;&#x5408;Nginx&#x7684;Stream&#x6A21;&#x5757;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#xFF0C;Nginx&#x4EE3;&#x7406;&#x5904;&#x7406;Trojan&#x7684;TLS&#xFF0C;&#x8FBE;&#x5230;&#x9690;&#x85CF;TLS&#x63E1;&#x624B;&#x4FE1;&#x606F;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;fallback&#x5230;http1.1&#x7684;&#x7AD9;&#x70B9;&#x8FBE;&#x5230;&#x6BD4;SS&#x66F4;&#x9AD8;&#x7684;&#x6027;&#x80FD;&#x6C34;&#x5E73;&#x3002;</p>
+<h2 id="&#x539F;&#x6587;">&#x539F;&#x6587;</h2>
+<p>&#x5F88;&#x591A;&#x4EBA;&#x89C9;&#x5F97;&#x6709;Shadowsocks&#x5355;&#x7AEF;&#x53E3;&#x5C31;&#x591F;&#x4E86;&#x5440;&#xFF0C;&#x4E3A;&#x5565;&#x8981;&#x5F15;&#x5165;Shadowsocks - V2Ray-Plugin&#x5462;&#xFF1F;</p>
+<p>&#x9996;&#x5148;&#x9488;&#x5BF9;&#x8FD1;&#x65E5;&#x6765;&#x7684;&#x56FD;&#x9645;&#x4E92;&#x8054;&#x7F51;&#x901A;&#x8BAF;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4E2A;&#x4EBA;&#x5206;&#x6790;&#x8BA4;&#x4E3A;&#xFF0C;&#x5728;&#x7279;&#x6B8A;&#x65F6;&#x671F;&#xFF0C;&#x4F1A;&#x9488;&#x5BF9;go&#x7684;TLS&#x63E1;&#x624B;&#x884C;&#x4E3A;&#x8FDB;&#x884C;&#x5339;&#x914D;&#xFF0C;&#x5E76;&#x52A0;&#x4EE5;&#x963B;&#x65AD;&#x3002;&#x518D;&#x52A0;&#x4E0A;&#x73B0;&#x6709;&#x5927;&#x90E8;&#x5206;&#x7684;&#x8F6F;&#x4EF6;&#xFF08;&#x5982;V2ray-core,Xray-core&#xFF09;&#x90FD;&#x662F;&#x4EE5;go&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5E76;&#x91C7;&#x7528;go&#x7684;&#x5E93;&#x8FDB;&#x884C;TLS&#x5904;&#x7406;&#x3002;&#x56E0;&#x6B64;&#x5728;&#x7279;&#x6B8A;&#x65F6;&#x671F;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;go&#x7684;TLS&#x63E1;&#x624B;&#x884C;&#x4E3A;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x8BC6;&#x522B;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x7AEF;&#x53E3;&#x7CBE;&#x51C6;&#x963B;&#x65AD;&#x3002;&#x6240;&#x4EE5;&#x5927;&#x90E8;&#x5206;&#x76F4;&#x63A5;&#x91C7;&#x7528;go&#x8FDB;&#x884C;tls&#x5904;&#x7406;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x6BD4;&#x5982;Trojan&#xFF0C;&#x5728;&#x8FD1;&#x65E5;&#x906D;&#x53D7;&#x4E86;&#x4E25;&#x91CD;&#x963B;&#x65AD;&#x3002;&#x540C;&#x6837;&#xFF0C;&#x4F7F;&#x7528;Caddy&#x53CD;&#x4EE3;&#x8FDB;&#x884C;&#x4F2A;&#x88C5;&#x7684;&#x884C;&#x4E3A;&#x4E5F;&#x906D;&#x53D7;&#x4E86;&#x963B;&#x65AD;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x9488;&#x5BF9;go&#x7684;TLS&#x5E93;&#x8FDB;&#x884C;&#x8BC6;&#x522B;&#x7684;&#x884C;&#x4E3A;&#x6709;&#x6781;&#x5927;&#x7684;&#x8BEF;&#x62A5;&#x7387;&#xFF08;&#x5C01;&#x6740;&#x6B63;&#x5E38;&#x7684;Caddy&#x53CD;&#x4EE3;&#x7684;&#x7F51;&#x7AD9;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x7279;&#x6B8A;&#x65F6;&#x671F;&#x5DF2;&#x7ECF;&#x88AB;&#x8BC1;&#x5B9E;&#x662F;&#x53EF;&#x80FD;&#x5B9E;&#x884C;&#x7684;&#x4E86;&#x3002;&#x56E0;&#x6211;&#x8BA4;&#x4E3A;&#xFF0C;&#x9700;&#x8981;&#x9690;&#x85CF;go&#x7684;TLS&#x63E1;&#x624B;&#x884C;&#x4E3A;&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x66F4;&#x9AD8;&#x7684;&#x9690;&#x853D;&#x6027;&#x3002;&#x4E3A;&#x6B64;&#xFF0C;&#x6211;&#x8BA4;&#x4E3A;&#x91C7;&#x7528;C&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;NGINX&#x662F;&#x76EE;&#x524D;&#x6700;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;&#x73B0;&#x6709;&#x60C5;&#x51B5;&#x4E5F;&#x8868;&#x660E;&#xFF1A;Vmess+ws+tls+nginx&#x5728;&#x76EE;&#x524D;&#x5B58;&#x6D3B;&#x6027;&#x6700;&#x597D;&#x3002;</p>
+<p>Vmess+ws+tls+nginx&#x867D;&#x7136;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x9690;&#x85CF;&#x4E86;go&#x7684;TLS&#x63E1;&#x624B;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x662F;Vmess&#x534F;&#x8BAE;&#x7531;&#x4E8E;&#x5176;&#x672C;&#x8EAB;&#x8BBE;&#x8BA1;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x7684;&#x5185;&#x5B58;&#x5360;&#x7528;&#x3002;&#x540C;&#x65F6;&#x5176;&#x57FA;&#x4E8E;&#x65F6;&#x95F4;&#x7684;&#x9A8C;&#x8BC1;&#x8BBE;&#x8BA1;&#xFF0C;&#x589E;&#x52A0;&#x4E86;&#x5176;&#x4F7F;&#x7528;&#x96BE;&#x5EA6;&#x3002;<del>&#x800C;Trojan&#x6682;&#x65F6;&#x53C8;&#x4E0D;&#x652F;&#x6301;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x8F6F;&#x4EF6;&#x8FDB;&#x884C;TLS&#x5904;&#x7406;</del>&#x3002;&#x6B64;&#x65F6;Shadowsocks - V2Ray-Plugin&#x6210;&#x4E3A;&#x4E86;&#x6700;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+<p>Shadowsocks - V2Ray-Plugin&#xFF0C;&#x9996;&#x5148;&#x662F;&#x57FA;&#x4E8E;Shadowsocks&#x7684;&#x3002;&#x5F97;&#x76CA;&#x4E8E;Shadowsocks&#x534F;&#x8BAE;&#x8BBE;&#x8BA1;&#xFF0C;&#x4F7F;&#x5F97;Shadowsocks&#x62E5;&#x6709;&#x6BD4;Vmess&#x66F4;&#x5FEB;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x4E0D;&#x4F9D;&#x8D56;&#x65F6;&#x95F4;&#x7684;&#x9A8C;&#x8BC1;&#x3002;&#x540C;&#x65F6;V2Ray-Plugin&#x7ED9;&#x4E88;Shadowsocks&#x8FDB;&#x884C;websocket&#x6DF7;&#x6DC6;&#x548C;TLS&#x52A0;&#x5BC6;&#x7684;&#x80FD;&#x529B;&#x3002;&#x6781;&#x5927;&#x589E;&#x5F3A;&#x4E86;Shadowsocks&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x4F7F;&#x5F97;&#x6D41;&#x91CF;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x516C;&#x7F51;&#x4F20;&#x8F93;&#xFF0C;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x96A7;&#x9053;&#x3002;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x628A;TLS&#x4EA4;&#x7531;NGINX&#x5904;&#x7406;&#xFF0C;&#x9690;&#x85CF;go&#x7684;&#x76F8;&#x5173;&#x7279;&#x5F81;&#xFF0C;&#x9632;&#x6B62;&#x88AB;&#x963B;&#x65AD;&#x7AEF;&#x53E3;&#x3002;</p>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x4E3A;&#x4E86;&#x9690;&#x85CF;&#x7279;&#x5F81;&#xFF0C;&#x6211;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x91C7;&#x7528;nginx+ws+tls+everything&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x5728;&#x76EE;&#x524D;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;nginx+ws+tls+ss&#x7684;&#x914D;&#x7F6E;&#x4F1A;&#x4F18;&#x4E8E;nginx+ws+tls+vmess&#x3002;&#x540C;&#x65F6;&#x4E3A;&#x4E86;&#x957F;&#x8FDC;&#x8003;&#x8651;&#xFF0C;&#x6211;&#x5EFA;&#x8BAE;&#x6240;&#x6709;&#x7684;&#x534F;&#x8BAE;&#x5B9E;&#x73B0;&#x8F6F;&#x4EF6;&#x91C7;&#x7528;C&#x8BED;&#x8A00;&#x63D0;&#x4F9B;&#x7684;TLS&#x5E93;&#x8FDB;&#x884C;TLS&#x76F8;&#x5173;&#x5904;&#x7406;&#xFF0C;&#x6216;&#x8005;&#x53C2;&#x8003;Shadowsocks&#x5206;&#x79BB;&#x51FA;&#x63D2;&#x4EF6;&#x5C42;&#xFF0C;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x8F6F;&#x4EF6;&#x5982;nginx&#x8FDB;&#x884C;TLS&#x5904;&#x7406;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="memopt.html" class="navigation navigation-prev " aria-label="Previous page: 内存优化相关">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="nginx+trojan-zan-shi-di-shen.html" class="navigation navigation-next " aria-label="Next page: Nginx+Trojan暂时滴神！">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"为什么要引入Shadowsocks - V2Ray-Plugin","level":"9.2","depth":1,"next":{"title":"Nginx+Trojan暂时滴神！","level":"9.3","depth":1,"path":"za-xiang/nginx+trojan-zan-shi-di-shen.md","ref":"za-xiang/nginx+trojan-zan-shi-di-shen.md","articles":[]},"previous":{"title":"内存优化相关","level":"9.1","depth":1,"path":"za-xiang/memopt.md","ref":"za-xiang/memopt.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints"],"pluginsConfig":{"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"za-xiang/wei-shen-me-yao-yin-ru-shadowsocks-v2rayplugin.md","mtime":"2022-07-28T10:21:51.061Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-28T10:22:21.735Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

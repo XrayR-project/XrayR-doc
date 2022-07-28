@@ -1,0 +1,689 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>使用docker安装 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="manual.html" />
+    
+    
+    <link rel="prev" href="one-click.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于XrayR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">XrayR下载和安装</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    下载和安装
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="one-click.html">
+            
+                <a href="one-click.html">
+            
+                    
+                    使用一键脚本安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.2" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    使用docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="manual.html">
+            
+                <a href="manual.html">
+            
+                    
+                    手动安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">XrayR配置文件说明</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../xrayr-pei-zhi-wen-jian-shuo-ming/config.html">
+            
+                <a href="../../xrayr-pei-zhi-wen-jian-shuo-ming/config.html">
+            
+                    
+                    配置文件说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对接SSpanel</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../dui-jie-sspanel/sspanel/">
+            
+                <a href="../../dui-jie-sspanel/sspanel/">
+            
+                    
+                    基本对接配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../dui-jie-sspanel/sspanel/sspanel_custom_config.html">
+            
+                <a href="../../dui-jie-sspanel/sspanel/sspanel_custom_config.html">
+            
+                    
+                    对接新版SSPanel Custom Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../dui-jie-sspanel/sspanel/v2ray.html">
+            
+                <a href="../../dui-jie-sspanel/sspanel/v2ray.html">
+            
+                    
+                    对接V2ray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../dui-jie-sspanel/sspanel/trojan.html">
+            
+                <a href="../../dui-jie-sspanel/sspanel/trojan.html">
+            
+                    
+                    对接Trojan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../dui-jie-sspanel/sspanel/shadowsocks.html">
+            
+                <a href="../../dui-jie-sspanel/sspanel/shadowsocks.html">
+            
+                    
+                    对接Shadowsocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../dui-jie-sspanel/sspanel/dui-jie-shadowsocks-v2rayplugin.html">
+            
+                <a href="../../dui-jie-sspanel/sspanel/dui-jie-shadowsocks-v2rayplugin.html">
+            
+                    
+                    对接Shadowsocks - V2Ray-Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对接V2board</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../dui-jie-v2board/v2board.html">
+            
+                <a href="../../dui-jie-v2board/v2board.html">
+            
+                    
+                    基本对接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对接PMPanel</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../dui-jie-pmpanel/ji-ben-dui-jie-pei-zhi.html">
+            
+                <a href="../../dui-jie-pmpanel/ji-ben-dui-jie-pei-zhi.html">
+            
+                    
+                    基本对接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对接ProxyPanel</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../dui-jie-proxypanel/ji-ben-dui-jie-pei-zhi.html">
+            
+                <a href="../../dui-jie-proxypanel/ji-ben-dui-jie-pei-zhi.html">
+            
+                    
+                    基本对接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">功能说明</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../gong-neng-shuo-ming/speedlimit.html">
+            
+                <a href="../../gong-neng-shuo-ming/speedlimit.html">
+            
+                    
+                    限速功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../../gong-neng-shuo-ming/devicelimit.html">
+            
+                <a href="../../gong-neng-shuo-ming/devicelimit.html">
+            
+                    
+                    设备连接限制功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../../gong-neng-shuo-ming/dns.html">
+            
+                <a href="../../gong-neng-shuo-ming/dns.html">
+            
+                    
+                    自定义DNS说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../../gong-neng-shuo-ming/zi-ding-yi-lu-you-gong-neng-shuo-ming.html">
+            
+                <a href="../../gong-neng-shuo-ming/zi-ding-yi-lu-you-gong-neng-shuo-ming.html">
+            
+                    
+                    自定义路由功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../../gong-neng-shuo-ming/zi-ding-yi-ru-kou-gong-neng-shuo-ming.html">
+            
+                <a href="../../gong-neng-shuo-ming/zi-ding-yi-ru-kou-gong-neng-shuo-ming.html">
+            
+                    
+                    自定义入口功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="../../gong-neng-shuo-ming/zi-ding-yi-chu-kou-gong-neng-shuo-ming.html">
+            
+                <a href="../../gong-neng-shuo-ming/zi-ding-yi-chu-kou-gong-neng-shuo-ming.html">
+            
+                    
+                    自定义出口功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="../../gong-neng-shuo-ming/rule.html">
+            
+                <a href="../../gong-neng-shuo-ming/rule.html">
+            
+                    
+                    审计功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="../../gong-neng-shuo-ming/cert.html">
+            
+                <a href="../../gong-neng-shuo-ming/cert.html">
+            
+                    
+                    自动申请证书说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="../../gong-neng-shuo-ming/fallback.html">
+            
+                <a href="../../gong-neng-shuo-ming/fallback.html">
+            
+                    
+                    Fallback 功能说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">杂项</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../za-xiang/memopt.html">
+            
+                <a href="../../za-xiang/memopt.html">
+            
+                    
+                    内存优化相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../../za-xiang/wei-shen-me-yao-yin-ru-shadowsocks-v2rayplugin.html">
+            
+                <a href="../../za-xiang/wei-shen-me-yao-yin-ru-shadowsocks-v2rayplugin.html">
+            
+                    
+                    为什么要引入Shadowsocks - V2Ray-Plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../../za-xiang/nginx+trojan-zan-shi-di-shen.html">
+            
+                <a href="../../za-xiang/nginx+trojan-zan-shi-di-shen.html">
+            
+                    
+                    Nginx+Trojan暂时滴神！
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >使用docker安装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F7F;&#x7528;docker&#x5B89;&#x88C5;">&#x4F7F;&#x7528;docker&#x5B89;&#x88C5;</h1>
+<h2 id="&#x5B89;&#x88C5;-docker">&#x5B89;&#x88C5; Docker</h2>
+<h3 id="centos">Centos</h3>
+<pre><code class="lang-bash">yum install -y yum-utils
+yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+yum install docker-ce docker-ce-cli containerd.io -y
+systemctl start docker
+systemctl <span class="hljs-built_in">enable</span> docker
+</code></pre>
+<h3 id="debian--ubuntu">Debian / Ubuntu</h3>
+<pre><code class="lang-bash">sudo apt-get update
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   <span class="hljs-string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   <span class="hljs-variable">$(lsb_release -cs)</span> \
+   stable&quot;</span>
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+systemctl start docker
+systemctl <span class="hljs-built_in">enable</span> docker
+</code></pre>
+<h2 id="&#x5B89;&#x88C5;docker-compose">&#x5B89;&#x88C5;Docker-compose</h2>
+<pre><code class="lang-bash">curl -fsSL https://get.docker.com | bash <span class="hljs-_">-s</span> docker
+curl -L <span class="hljs-string">&quot;https://github.com/docker/compose/releases/download/1.26.1/docker-compose-<span class="hljs-variable">$(uname -s)</span>-<span class="hljs-variable">$(uname -m)</span>&quot;</span> -o /usr/<span class="hljs-built_in">local</span>/bin/docker-compose
+chmod +x /usr/<span class="hljs-built_in">local</span>/bin/docker-compose
+</code></pre>
+<h2 id="docker-compose-&#x5B89;&#x88C5;xrayr-&#x63A8;&#x8350;">Docker-compose &#x5B89;&#x88C5;XrayR (&#x63A8;&#x8350;)</h2>
+<ol>
+<li><code>git clone https://github.com/XrayR-project/XrayR-release</code></li>
+<li><code>cd XrayR-release</code></li>
+<li>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;<code>config.yml</code>&#xFF0C;&#x8BE6;&#x89C1;&#xFF1A;<a href="../../xrayr-pei-zhi-wen-jian-shuo-ming/config.html">&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BF4;&#x660E;</a></li>
+<li>&#x542F;&#x52A8;docker&#xFF1A;<code>docker-compose up -d</code></li>
+</ol>
+<h2 id="docker-run-&#x5B89;&#x88C5;xrayr">Docker run &#x5B89;&#x88C5;XrayR</h2>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#x6307;&#x5B9A;<code>config.yml</code>&#x76EE;&#x5F55;&#x3002;</p>
+<pre><code class="lang-bash">docker pull crackair/xrayr:latest &amp;&amp; docker run --restart=always --name xrayr <span class="hljs-_">-d</span> -v <span class="hljs-variable">${PATH_TO_CONFIG}</span>/config.yml:/etc/XrayR/config.yml --network=host crackair/xrayr:latest
+</code></pre>
+<h2 id="&#x66F4;&#x65B0;xrayr">&#x66F4;&#x65B0;XrayR</h2>
+<p>docker-compose&#x4EC5;&#x9700;&#x4E24;&#x6761;&#x7B80;&#x5355;&#x901A;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x66F4;&#x65B0;&#x3001;&#x5220;&#x9664;&#x5BB9;&#x5668;&#x5E76;&#x91CD;&#x542F;&#x3002;&#x66F4;&#x65B0;&#x8F6F;&#x4EF6;&#x540E;<code>config.yml</code>&#x4E0D;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;&#x8986;&#x76D6;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#x5728; docker-compose.yml &#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-bash">docker-compose pull
+docker-compose up <span class="hljs-_">-d</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="one-click.html" class="navigation navigation-prev " aria-label="Previous page: 使用一键脚本安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="manual.html" class="navigation navigation-next " aria-label="Next page: 手动安装">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"使用docker安装","level":"2.1.2","depth":2,"next":{"title":"手动安装","level":"2.1.3","depth":2,"path":"xrayr-xia-zai-he-an-zhuang/install/manual.md","ref":"xrayr-xia-zai-he-an-zhuang/install/manual.md","articles":[]},"previous":{"title":"使用一键脚本安装","level":"2.1.1","depth":2,"path":"xrayr-xia-zai-he-an-zhuang/install/one-click.md","ref":"xrayr-xia-zai-he-an-zhuang/install/one-click.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints"],"pluginsConfig":{"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"xrayr-xia-zai-he-an-zhuang/install/docker.md","mtime":"2022-07-28T10:21:51.061Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-28T10:22:21.735Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
