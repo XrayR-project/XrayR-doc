@@ -84,11 +84,10 @@ http {
 
 {% hint style="info" %}
 centos系统请关闭selinux，不然可能导致转发失败。
-```
 sudo setenforce 0
 sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
-```
 {% endhint %}
+
 ## XrayR Trojan配置
 
 **关键配置：**
