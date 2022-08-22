@@ -281,7 +281,7 @@ PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
 
 | 参数        | 选项                                       | 说明             |
 | ----------- | ------------------------------------------ | ---------------- |
-| `PanelType` | `SSPanel`,`V2board`,`PMpanel`,`Proxypanel` | 对接前端面板类型 |
+| `PanelType` | `SSPanel`,`V2board`,`PMpanel`,`Proxypanel`, `V2RaySocks`| 对接前端面板类型 |
 
 #### 面板对接配置
 

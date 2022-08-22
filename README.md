@@ -55,6 +55,7 @@ A Xray backend framework that can easily support many panels.
 | v2board                                                | √     | √      | √                                |
 | [PMPanel](https://github.com/ByteInternetHK/PMPanel)   | √     | √      | √                                |
 | [ProxyPanel](https://github.com/ProxyPanel/ProxyPanel) | √     | √      | √                                |
+| [WHMCS (V2RaySocks)](https://v2raysocks.doxtex.com/)   | √     | √      | √                                |
 
 ## V2ray支持协议
 
