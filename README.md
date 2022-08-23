@@ -67,9 +67,10 @@ A Xray backend framework that can easily support many panels.
 
 ## Trojan支持协议
 
-| 协议   | 支持情况 |
-| :----- | :------- |
-| Trojan | √        |
+| 协议      | 支持情况 |
+| :-------- | :------- |
+| Trojan    | √        |
+| Trojan-go | ws, grpc |
 
 ## Shadowsocks支持协议
 

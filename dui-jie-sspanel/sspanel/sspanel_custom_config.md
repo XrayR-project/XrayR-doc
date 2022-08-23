@@ -180,6 +180,18 @@ alterId设为0，则自动启用VMessAEAD。
 }
 ```
 
+## Trojan-go ws示例
+
+``` json
+{
+	"offset_port_node": 443,
+	"server_sub": "hk.domain.com",
+	"host": "hk.domain.com",
+	"network": "ws",
+	"path": "/path"
+}
+```
+
 ## 中转示例
 在任一配置中设置`offset_port_user`为用户连接端口
 ``` json
