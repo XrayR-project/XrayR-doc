@@ -1,6 +1,8 @@
 # 使用docker安装
 
+镜像地址：https://github.com/XrayR-project/XrayR/pkgs/container/xrayr
 ## docker image tag
+
 `master`: 与项目最新提交保持一致。
 
 `latest`: 最新release版本。
@@ -61,7 +63,7 @@ chmod +x /usr/local/bin/docker-compose
 请注意指定`config.yml`目录。
 
 ```bash
-docker pull mengxin239/xrayr:latest && docker run --restart=always --name xrayr -d -v ${PATH_TO_CONFIG}/config.yml:/etc/XrayR/config.yml --network=host mengxin239/xrayr:latest
+docker pull mengxin239/xrayr:latest && docker run --restart=always --name xrayr -d -v ${PATH_TO_CONFIG}/config.yml:/etc/XrayR/config.yml --network=host ghcr.io/xrayr-project/xrayr:latest
 ```
 
 ## 更新XrayR
