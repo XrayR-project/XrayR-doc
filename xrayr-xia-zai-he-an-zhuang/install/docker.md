@@ -63,7 +63,7 @@ chmod +x /usr/local/bin/docker-compose
 请注意指定`config.yml`目录。
 
 ```bash
-docker pull mengxin239/xrayr:latest && docker run --restart=always --name xrayr -d -v ${PATH_TO_CONFIG}/config.yml:/etc/XrayR/config.yml --network=host ghcr.io/xrayr-project/xrayr:latest
+docker pull ghcr.io/xrayr-project/xrayr:latest && docker run --restart=always --name xrayr -d -v ${PATH_TO_CONFIG}/config.yml:/etc/XrayR/config.yml --network=host ghcr.io/xrayr-project/xrayr:latest
 ```
 
 ## 更新XrayR
