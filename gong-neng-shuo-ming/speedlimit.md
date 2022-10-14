@@ -18,6 +18,11 @@
 
 XrayR支持动态限速功能，可以根据用户的使用流量调整限速值。在`ControllerConfig` 中配置如下项。
 
+{% hint style="info" %}
+为保证能及时调整长连接的限速（如长时间下载），请确保默认限速值大于0。可在用户、节点、本地任意位置配置默认大于0的限速值，优先级为本地>节点>用户。如果默认限速值为0，则用户的动态限速只有在下次建立连接时才会生效。
+{% endhint %}
+
+
 ```yaml
 AutoSpeedLimitConfig:
     Limit: 0 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
