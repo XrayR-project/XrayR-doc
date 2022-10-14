@@ -46,7 +46,12 @@ Nodes:
       DisableGetRule: false # Disable Get Rule from the panel
       DisableIVCheck: false # Disable the anti-reply protection for Shadowsocks
       DisableSniffing: false # Disable domain sniffing 
-      EnableProxyProtocol: false # Only works for WebSocket and TCP
+      EnableProxyProtocol: false
+      AutoSpeedLimitConfig:
+        Limit: 0 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
+        WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
+        LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
+        LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
       EnableFallback: false # Only support for Trojan and Vless
       FallBackConfigs:  # Support multiple fallbacks
         -
@@ -279,9 +284,9 @@ Nodes:
 PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
 ```
 
-| 参数        | 选项                                       | 说明             |
-| ----------- | ------------------------------------------ | ---------------- |
-| `PanelType` | `SSPanel`,`V2board`,`PMpanel`,`Proxypanel`, `V2RaySocks`| 对接前端面板类型 |
+| 参数        | 选项                                                     | 说明             |
+| ----------- | -------------------------------------------------------- | ---------------- |
+| `PanelType` | `SSPanel`,`V2board`,`PMpanel`,`Proxypanel`, `V2RaySocks` | 对接前端面板类型 |
 
 #### 面板对接配置
 
@@ -327,7 +332,12 @@ ControllerConfig:
   DisableGetRule: false # Disable Get Rule from the panel
   DisableIVCheck: false # Disable the anti-reply protection for Shadowsocks
   DisableSniffing: false # Disable domain sniffing 
-  EnableProxyProtocol: false # Only works for WebSocket and TCP
+  EnableProxyProtocol: false
+  AutoSpeedLimitConfig:
+    Limit: 0 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
+    WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
+    LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
+    LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
   EnableFallback: false # Only support for Trojan and Vless
   FallBackConfigs:  # Support multiple fallbacks
     -
@@ -348,7 +358,8 @@ ControllerConfig:
 | `DisableGetRule`       | `false`, `true`                    | 是否禁止获取远程规则，默认`false`                                                                                                    |
 | `DisableIVCheck`       | `false`, `true`                    | 是否关闭Shadowsocks用于防止重放攻击的布隆过滤器，默认`false`                                                                         |
 | `DisableSniffing`      | `false`, `true`                    | 是否关闭domain sniffing，默认`false`                                                                                                 |
-| `EnableProxyProtocol`  | `true`,`false`                     | 是否为当前节点启用ProxyProtocol获取中转IP，只对TCP和WS有效                                                                           |
+| `EnableProxyProtocol`  | `true`,`false`                     | 是否为当前节点启用ProxyProtocol获取中转IP                                                                                            |
+| `AutoSpeedLimitConfig` | list                               | 动态限速相关配置，请查看 [动态限速](../gong-neng-shuo-ming/speedlimit.md)                                                            |
 | `EnableFallback`       | `true`,`false`                     | 是否为当前节点启用Fallback，只对Vless和Trojan协议有效                                                                                |
 | `FallBackConfigs`      | list                               | Fallback 相关配置，请查看 [Fallback功能说明](../gong-neng-shuo-ming/fallback.md)                                                     |
 
