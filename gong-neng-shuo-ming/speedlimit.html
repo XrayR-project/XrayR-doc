@@ -588,6 +588,40 @@
 <p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>&#x8282;&#x70B9;&#x9650;&#x901F;&#xFF1A;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#x5230;&#x8BE5;&#x8282;&#x70B9;&#x7684;&#x7528;&#x6237;&#x9650;&#x901F;&#x503C;&#x90FD;&#x4F1A;&#x91C7;&#x7528;<code>SpeedLimit</code>&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x503C;<strong>&#xFF08;&#x4E0D;&#x662F;&#x7AEF;&#x53E3;&#x9650;&#x901F;&#xFF09;</strong></p>
 </div></div></p>
 <p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89C1;&#xFF1A;<a href="../xrayr-pei-zhi-wen-jian-shuo-ming/config.html#mian-ban-dui-jie-pei-zhi">&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BF4;&#x660E;</a></p>
+<h2 id="&#x52A8;&#x6001;&#x9650;&#x901F;&#x529F;&#x80FD;">&#x52A8;&#x6001;&#x9650;&#x901F;&#x529F;&#x80FD;</h2>
+<p>XrayR&#x652F;&#x6301;&#x52A8;&#x6001;&#x9650;&#x901F;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x4F7F;&#x7528;&#x6D41;&#x91CF;&#x8C03;&#x6574;&#x9650;&#x901F;&#x503C;&#x3002;&#x5728;<code>ControllerConfig</code> &#x4E2D;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#x9879;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">AutoSpeedLimitConfig:</span>
+<span class="hljs-attr">    Limit:</span> <span class="hljs-number">0</span> <span class="hljs-comment"># Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)</span>
+<span class="hljs-attr">    WarnTimes:</span> <span class="hljs-number">0</span> <span class="hljs-comment"># After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.</span>
+<span class="hljs-attr">    LimitSpeed:</span> <span class="hljs-number">0</span> <span class="hljs-comment"># The speedlimit of a limited user (unit: mbps)</span>
+<span class="hljs-attr">    LimitDuration:</span> <span class="hljs-number">0</span> <span class="hljs-comment"># How many minutes will the limiting last (unit: minute)</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limit</td>
+<td>&#x8B66;&#x544A;&#x901F;&#x5EA6;&#x3002;&#x8BBE;&#x7F6E;&#x4E3A;0&#x4EE5;&#x7981;&#x7528;&#x81EA;&#x52A8;&#x9650;&#x901F;&#x529F;&#x80FD;&#x3002;&#x5355;&#x4F4D;&#xFF1A;Mbps&#x3002;</td>
+</tr>
+<tr>
+<td>WarnTimes</td>
+<td>&#x8B66;&#x544A;&#x6B21;&#x6570;&#x3002;&#x8FDE;&#x7EED;&#x8B66;&#x544A;&#x6B21;&#x6570;&#x8FBE;&#x5230;&#x8BE5;&#x503C;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x5C06;&#x88AB;&#x9650;&#x901F;&#x3002;&#x8BBE;&#x7F6E;&#x4E3A;0&#x4EE5;&#x7ACB;&#x5373;&#x60E9;&#x7F5A;&#x8D85;&#x901F;&#x7528;&#x6237;&#x3002;</td>
+</tr>
+<tr>
+<td>LimitSpeed</td>
+<td>&#x9650;&#x901F;&#x503C;&#x3002;&#x5355;&#x4F4D;&#xFF1A;Mbps&#x3002;</td>
+</tr>
+<tr>
+<td>LimitDuration</td>
+<td>&#x9650;&#x901F;&#x65F6;&#x957F;&#x3002;&#x5355;&#x4F4D;&#xFF1A;&#x5206;&#x949F;&#x3002;</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -631,7 +665,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"限速功能说明","level":"9.1","depth":1,"next":{"title":"设备连接限制功能说明","level":"9.2","depth":1,"path":"gong-neng-shuo-ming/devicelimit.md","ref":"gong-neng-shuo-ming/devicelimit.md","articles":[]},"previous":{"title":"基本对接配置","level":"8.1","depth":1,"path":"dui-jie-v2raysocks/v2raysocks.md","ref":"dui-jie-v2raysocks/v2raysocks.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints"],"pluginsConfig":{"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gong-neng-shuo-ming/speedlimit.md","mtime":"2022-10-12T21:42:38.552Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-12T21:43:15.702Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"限速功能说明","level":"9.1","depth":1,"next":{"title":"设备连接限制功能说明","level":"9.2","depth":1,"path":"gong-neng-shuo-ming/devicelimit.md","ref":"gong-neng-shuo-ming/devicelimit.md","articles":[]},"previous":{"title":"基本对接配置","level":"8.1","depth":1,"path":"dui-jie-v2raysocks/v2raysocks.md","ref":"dui-jie-v2raysocks/v2raysocks.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hints"],"pluginsConfig":{"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"gong-neng-shuo-ming/speedlimit.md","mtime":"2022-10-14T04:16:03.007Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-14T04:16:30.526Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
