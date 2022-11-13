@@ -42,3 +42,7 @@ GlobalDeviceLimitConfig:
 {% hint style="info" %}
 为保证最大效率，启用全局设备限制后，建议将其他设备限制相关配置设为0，包括配置文件中的`DeviceLimit`和面板相关配置。
 {% endhint %}
+
+{% hint style="info" %}
+如果同一redis下对接了多个面板结点，建议同一面板下的结点使用同一redis数据库编号，以保证不同面板之间独立限制。
+{% endhint %}
