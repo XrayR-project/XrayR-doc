@@ -16,7 +16,7 @@ DnsConfigPath: # /etc/XrayR/dns.json # Path to dns config, check https://xtls.gi
 RouteConfigPath: # /etc/XrayR/route.json # Path to route config, check https://xtls.github.io/config/routing.html for help
 InboundConfigPath: # /etc/XrayR/custom_inbound.json # Path to custom inbound config, check https://xtls.github.io/config/inbound.html for help
 OutboundConfigPath: # /etc/XrayR/custom_outbound.json # Path to custom outbound config, check https://xtls.github.io/config/outbound.html for help
-ConnetionConfig:
+ConnectionConfig:
   Handshake: 4 # Handshake time limit, Second
   ConnIdle: 10 # Connection idle time limit, Second
   UplinkOnly: 2 # Time limit when the connection downstream is closed, Second
@@ -52,6 +52,13 @@ Nodes:
         WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
         LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
         LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
+      GlobalDeviceLimitConfig:
+        Limit: 0 # The global device limit of a user, 0 means disable
+        RedisAddr: 127.0.0.1:6379 # The redis server address
+        RedisPassword: YOUR PASSWORD # Redis password
+        RedisDB: 0 # Redis DB
+        Timeout: 5 # Timeout for redis request
+        Expiry: 60 # Expiry time (second)
       EnableFallback: false # Only support for Trojan and Vless
       FallBackConfigs:  # Support multiple fallbacks
         -
@@ -112,7 +119,7 @@ DnsConfigPath: # /etc/XrayR/dns.json # Path to dns config, check https://xtls.gi
 RouteConfigPath: # /etc/XrayR/route.json # Path to route config, check https://xtls.github.io/config/routing.html for help
 InboundConfigPath: # /etc/XrayR/custom_inbound.json # Path to custom inbound config, check https://xtls.github.io/config/inbound.html for help
 OutboundConfigPath: # /etc/XrayR/custom_outbound.json # Path to custom outbound config, check https://xtls.github.io/config/outbound.html for help
-ConnetionConfig:
+ConnectionConfig:
   Handshake: 4 # Handshake time limit, Second
   ConnIdle: 10 # Connection idle time limit, Second
   UplinkOnly: 2 # Time limit when the connection downstream is closed, Second
@@ -186,7 +193,7 @@ OutboundConfigPath: # /etc/XrayR/custom_outbound.json # Path to custom outbound 
 自定义连接释放的相关配置，可以一定程度优化内存占用
 
 ```yaml
-ConnetionConfig:
+ConnectionConfig:
   Handshake: 4 # Handshake time limit, Second
   ConnIdle: 10 # Connection idle time limit, Second
   UplinkOnly: 2 # Time limit when the connection downstream is closed, Second
@@ -338,6 +345,13 @@ ControllerConfig:
     WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
     LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
     LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
+  GlobalDeviceLimitConfig:
+    Limit: 0 # The global device limit of a user, 0 means disable
+    RedisAddr: 127.0.0.1:6379 # The redis server address
+    RedisPassword: YOUR PASSWORD # Redis password
+    RedisDB: 0 # Redis DB
+    Timeout: 5 # Timeout for redis request
+    Expiry: 60 # Expiry time (second)
   EnableFallback: false # Only support for Trojan and Vless
   FallBackConfigs:  # Support multiple fallbacks
     -
@@ -360,6 +374,7 @@ ControllerConfig:
 | `DisableSniffing`      | `false`, `true`                    | 是否关闭domain sniffing，默认`false`                                                                                                 |
 | `EnableProxyProtocol`  | `true`,`false`                     | 是否为当前节点启用ProxyProtocol获取中转IP                                                                                            |
 | `AutoSpeedLimitConfig` | list                               | 动态限速相关配置，请查看 [动态限速](../gong-neng-shuo-ming/speedlimit.md)                                                            |
+| `GlobalDeviceLimitConfig` | list                               | 全局设备限制相关配置，请查看 [全局设备限制](../gong-neng-shuo-ming/devicelimit.md)                                                            |
 | `EnableFallback`       | `true`,`false`                     | 是否为当前节点启用Fallback，只对Vless和Trojan协议有效                                                                                |
 | `FallBackConfigs`      | list                               | Fallback 相关配置，请查看 [Fallback功能说明](../gong-neng-shuo-ming/fallback.md)                                                     |
 
