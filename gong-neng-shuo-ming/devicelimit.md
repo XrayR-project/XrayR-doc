@@ -48,6 +48,6 @@ GlobalDeviceLimitConfig:
 {% endhint %}
 
 XrayR全局设备限制需要访问Redis服务器，会引入额外的延迟。为了降低延迟，可以采用以下策略：
-1. 关闭XrayR的全局设备限制，只在启用默认设备限制策略。
+1. 关闭XrayR的全局设备限制，只启用默认设备限制策略。
 2. 将Redis服务器部署在本地，或者和节点距离较近的位置。
 3. 搭建[Redis集群](https://redis.io/docs/management/scaling/)，使得节点始终可以访问距离较近的Redis服务器。
