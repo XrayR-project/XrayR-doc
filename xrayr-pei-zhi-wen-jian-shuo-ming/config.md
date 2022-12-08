@@ -24,7 +24,7 @@ ConnectionConfig:
   BufferSize: 64 # The internal cache size of each connection, kB 
 Nodes:
   -
-    PanelType: "SSpanel" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
+    PanelType: "SSpanel" # Panel type: SSpanel, NewV2board, V2board, PMpanel, Proxypanel
     ApiConfig:
       ApiHost: "http://127.0.0.1:667"
       ApiKey: "123"
@@ -53,7 +53,7 @@ Nodes:
         LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
         LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
       GlobalDeviceLimitConfig:
-        Limit: 0 # The global device limit of a user, 0 means disable
+        Enable: false # Enable the global device limit of a user
         RedisAddr: 127.0.0.1:6379 # The redis server address
         RedisPassword: YOUR PASSWORD # Redis password
         RedisDB: 0 # Redis DB
@@ -291,9 +291,9 @@ Nodes:
 PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
 ```
 
-| 参数        | 选项                                                     | 说明             |
-| ----------- | -------------------------------------------------------- | ---------------- |
-| `PanelType` | `SSPanel`,`V2board`,`PMpanel`,`Proxypanel`, `V2RaySocks` | 对接前端面板类型 |
+| 参数        | 选项                                                                    | 说明             |
+| ----------- | ----------------------------------------------------------------------- | ---------------- |
+| `PanelType` | `SSPanel`, `NewV2board`, `V2board`,`PMpanel`,`Proxypanel`, `V2RaySocks` | 对接前端面板类型 |
 
 #### 面板对接配置
 
@@ -346,7 +346,7 @@ ControllerConfig:
     LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
     LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
   GlobalDeviceLimitConfig:
-    Limit: 0 # The global device limit of a user, 0 means disable
+    Enable: false # Enable the global device limit of a user
     RedisAddr: 127.0.0.1:6379 # The redis server address
     RedisPassword: YOUR PASSWORD # Redis password
     RedisDB: 0 # Redis DB
@@ -361,22 +361,22 @@ ControllerConfig:
       ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for dsable
 ```
 
-| 参数                   | 选项                               | 说明                                                                                                                                 |
-| ---------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `ListenIP`             | 无                                 | 选择监听的IP地址，`0.0.0.0`会同时监听v6和v4                                                                                          |
-| `SendIP`               | 无                                 | 用于发送数据的 IP 地址                                                                                                               |
-| `UpdatePeriodic`       | 无                                 | 从前端更新节点、用户信息和上报用户使用信息的间隔，默认60秒                                                                           |
-| `EnableDNS`            | `true`,`false`                     | 是否为当前节点启用自定义DNS，默认使用系统DNS                                                                                         |
-| `DNSType`              | `AsIs`,`UseIP`,`UseIPv4`,`UseIPv6` | DNS解析类型，`AsIs`：使用系统DNS，`UseIP`,`UseIPv4`,`UseIPv6`为使用自定义DNS，请确保`EnableDNS`为`true`，且正确配置了`DnsConfigPath` |
-| `DisableUploadTraffic` | `false`, `true`                    | 是否禁止上传节点流量，默认`false`                                                                                                    |
-| `DisableGetRule`       | `false`, `true`                    | 是否禁止获取远程规则，默认`false`                                                                                                    |
-| `DisableIVCheck`       | `false`, `true`                    | 是否关闭Shadowsocks用于防止重放攻击的布隆过滤器，默认`false`                                                                         |
-| `DisableSniffing`      | `false`, `true`                    | 是否关闭domain sniffing，默认`false`                                                                                                 |
-| `EnableProxyProtocol`  | `true`,`false`                     | 是否为当前节点启用ProxyProtocol获取中转IP                                                                                            |
-| `AutoSpeedLimitConfig` | list                               | 动态限速相关配置，请查看 [动态限速](../gong-neng-shuo-ming/speedlimit.md)                                                            |
-| `GlobalDeviceLimitConfig` | list                               | 全局设备限制相关配置，请查看 [全局设备限制](../gong-neng-shuo-ming/devicelimit.md)                                                            |
-| `EnableFallback`       | `true`,`false`                     | 是否为当前节点启用Fallback，只对Vless和Trojan协议有效                                                                                |
-| `FallBackConfigs`      | list                               | Fallback 相关配置，请查看 [Fallback功能说明](../gong-neng-shuo-ming/fallback.md)                                                     |
+| 参数                      | 选项                               | 说明                                                                                                                                 |
+| ------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `ListenIP`                | 无                                 | 选择监听的IP地址，`0.0.0.0`会同时监听v6和v4                                                                                          |
+| `SendIP`                  | 无                                 | 用于发送数据的 IP 地址                                                                                                               |
+| `UpdatePeriodic`          | 无                                 | 从前端更新节点、用户信息和上报用户使用信息的间隔，默认60秒                                                                           |
+| `EnableDNS`               | `true`,`false`                     | 是否为当前节点启用自定义DNS，默认使用系统DNS                                                                                         |
+| `DNSType`                 | `AsIs`,`UseIP`,`UseIPv4`,`UseIPv6` | DNS解析类型，`AsIs`：使用系统DNS，`UseIP`,`UseIPv4`,`UseIPv6`为使用自定义DNS，请确保`EnableDNS`为`true`，且正确配置了`DnsConfigPath` |
+| `DisableUploadTraffic`    | `false`, `true`                    | 是否禁止上传节点流量，默认`false`                                                                                                    |
+| `DisableGetRule`          | `false`, `true`                    | 是否禁止获取远程规则，默认`false`                                                                                                    |
+| `DisableIVCheck`          | `false`, `true`                    | 是否关闭Shadowsocks用于防止重放攻击的布隆过滤器，默认`false`                                                                         |
+| `DisableSniffing`         | `false`, `true`                    | 是否关闭domain sniffing，默认`false`                                                                                                 |
+| `EnableProxyProtocol`     | `true`,`false`                     | 是否为当前节点启用ProxyProtocol获取中转IP                                                                                            |
+| `AutoSpeedLimitConfig`    | list                               | 动态限速相关配置，请查看 [动态限速](../gong-neng-shuo-ming/speedlimit.md)                                                            |
+| `GlobalDeviceLimitConfig` | list                               | 全局设备限制相关配置，请查看 [全局设备限制](../gong-neng-shuo-ming/devicelimit.md)                                                   |
+| `EnableFallback`          | `true`,`false`                     | 是否为当前节点启用Fallback，只对Vless和Trojan协议有效                                                                                |
+| `FallBackConfigs`         | list                               | Fallback 相关配置，请查看 [Fallback功能说明](../gong-neng-shuo-ming/fallback.md)                                                     |
 
 #### 证书申请相关配置
 

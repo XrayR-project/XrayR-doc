@@ -18,11 +18,11 @@
 
 ## 全局设备限制
 
-当XrayR版本>=v0.8.6，可以启用基于redis的全局设备限制功能，可以跨节点支持基于IP的设备限制，兼容所有面板。可在`ControllerConfig` 中配置如下项。
+当XrayR版本>=v0.8.7，可以启用基于redis的全局设备限制功能，可以跨节点支持基于IP的设备限制，兼容所有面板。可在`ControllerConfig` 中配置如下项。
 
 ```yaml
 GlobalDeviceLimitConfig:
-    Limit: 0 # The global device limit of a user, 0 means disable
+    Enable: false # Enable the global device limit of a user
     RedisAddr: 127.0.0.1:6379 # The redis server address
     RedisPassword: YOUR PASSWORD # Redis password
     RedisDB: 0 # Redis DB
@@ -30,24 +30,19 @@ GlobalDeviceLimitConfig:
     Expiry: 60 # Expiry time (second)
 ```
 
-| 参数          | 说明                                                                 |
-| ------------- | -------------------------------------------------------------------- |
-| Limit         | 每个用户限制独立IP数量，设置为0则禁用                            |
-| RedisAddr     | redis连接地址，不同节点需要连接到同一redis数据库，来实现全局设备限制 |
-| RedisPassword | redis密码                                                            |
-| RedisDB       | redis数据库编号                                                      |
-| Timeout       | 连接redis超时时间，单位：秒                                          |
-| Expiry        | redis中存储的在线用户过期时间，单位：秒                              |
-
-{% hint style="info" %}
-为保证最大效率，启用全局设备限制后，建议将其他设备限制相关配置设为0，包括配置文件中的`DeviceLimit`和面板相关配置。
-{% endhint %}
+| 参数          | 说明                                                                            |
+| ------------- | ------------------------------------------------------------------------------- |
+| Enable        | 是否启用全局设备限制，设备限制数量由面板下发、或由配置文件中的`DeviceLimit`指定 |
+| RedisAddr     | redis连接地址，不同节点需要连接到同一redis数据库，来实现全局设备限制            |
+| RedisPassword | redis密码                                                                       |
+| RedisDB       | redis数据库编号                                                                 |
+| Timeout       | 连接redis超时时间，单位：秒                                                     |
+| Expiry        | redis中存储的在线用户过期时间，单位：秒                                         |
 
 {% hint style="info" %}
 如果同一redis下对接了多个面板结点，建议同一面板下的结点使用同一redis数据库编号，以保证不同面板之间独立限制。
 {% endhint %}
 
-XrayR全局设备限制需要访问Redis服务器，会引入额外的延迟。为了降低延迟，可以采用以下策略：
-1. 关闭XrayR的全局设备限制，只启用默认设备限制策略。
-2. 将Redis服务器部署在本地，或者和节点距离较近的位置。
-3. 搭建[Redis集群](https://redis.io/docs/management/scaling/)，使得节点始终可以访问距离较近的Redis服务器。
+{% hint style="info" %}
+XrayR全局设备限制需要访问Redis服务器，用户第一次连接时会引入额外的延迟。我们实现了缓存机制，只会在用户第一次访问结点时和redis通讯，后续访问会直接从缓存中读取，因此不会引入额外的延迟。
+{% endhint %}
