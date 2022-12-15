@@ -74,7 +74,7 @@ A Xray backend framework that can easily support many panels.
 
 ## Shadowsocks支持协议
 
-| 协议            | 支持情况 | 加密方法                                         |
-| :-------------- | :------- | :----------------------------------------------- |
-| ShadowsocksAEAD | √        | aes-128-gcm, aes-256-gcm, chacha20-ietf-poly1305 |
-
+| 协议            | 支持情况 | 加密方法                                                                        |
+| :-------------- | :------- | :------------------------------------------------------------------------------ |
+| ShadowsocksAEAD | √        | aes-128-gcm, aes-256-gcm, chacha20-ietf-poly1305                                |
+| Shadowsocks2022 | √        | 2022-blake3-aes-128-gcm, 2022-blake3-aes-256-gcm, 2022-blake3-chacha20-poly1305 |

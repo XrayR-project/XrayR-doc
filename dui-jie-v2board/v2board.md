@@ -12,6 +12,9 @@ v2board 版本 >= [1.7.0](https://github.com/v2board/v2board/releases/tag/1.7.0)
 
 配置文件详见：[配置文件说明](../xrayr-pei-zhi-wen-jian-shuo-ming/config.md)
 
+### 对接shadowsocks2022
+确保v2board 版本 >= [1.7.0](https://github.com/v2board/v2board/releases/tag/1.7.0)，XrayR 版本>= [v0.8.8](https://github.com/XrayR-project/XrayR/releases/tag/v0.8.8)，`PanelType:`请选择 "NewV2board"。
+
 ### 对接vmess+ws
 v2board需要在传输协议配置中增加以下内容，配置ws的路径：
 ```
