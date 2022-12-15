@@ -5,7 +5,7 @@
 3. 启用vless和xtls，请在配置文件中手动启动，V2board不支持在线配置，同时V2board不支持vless和xtls下发，请手动修改客户端配置，或者自行寻找其他解决方案。
 
 {% hint style="info" %}
-v2board 版本 > [1.7.0](https://github.com/v2board/v2board/releases/tag/1.7.0)请选择 "NewV2board"
+v2board 版本 >= [1.7.0](https://github.com/v2board/v2board/releases/tag/1.7.0)请选择 "NewV2board"
 
 其他版本选择 "V2board"，注意老版本API将于 2023.6.1后移除。
 {% endhint %}
