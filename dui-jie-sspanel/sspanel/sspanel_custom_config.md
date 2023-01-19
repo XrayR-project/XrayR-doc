@@ -1,7 +1,6 @@
 # 对接新版SSPanel Custom Config
 
-对于sspanel >= 2021.11的版本中自动启用Custom_config的配置方法，请查看以下配置，正确配置结点信息。关于订阅相关信息，请查看[SSPanel相关文档](https://wiki.sspanel.org/#/universal-subscription)。
-如果不想使用custom config，请在`ApiConfig`中将`DisableCustomConfig`设为`true`。
+对于SSPanel-UIM >= 2021.11的版本中自动启用Custom_config的配置方法，请查看以下配置，正确配置节点信息。或者查看SSPanel相关文档：[https://wiki.sspanel.org/#/setup-custom-config](https://wiki.sspanel.org/#/setup-custom-config)。
 
 # Shadowsocks
 ```json
@@ -123,7 +122,7 @@ alterId设为0，则自动启用VMessAEAD。
 }
 ```
 
-此时用户连接端口为8888，结点监听端口为12345
+此时用户连接端口为8888，节点监听端口为12345
 
 ## 启用vless
 在任一配置中设置`enable_vless: 1`为用户连接端口
@@ -202,7 +201,7 @@ alterId设为0，则自动启用VMessAEAD。
 	"host": "hk.domain.com"
 }
 ```
-此时用户连接443，结点监听12345
+此时用户连接443，节点监听12345
 
 ## 启用xtls
 

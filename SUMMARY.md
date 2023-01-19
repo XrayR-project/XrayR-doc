@@ -13,14 +13,10 @@
 
 * [配置文件说明](xrayr-pei-zhi-wen-jian-shuo-ming/config.md)
 
-## 对接SSpanel
+## 对接SSPanel
 
 * [基本对接配置](dui-jie-sspanel/sspanel/README.md)
-  * [对接新版SSPanel Custom Config](dui-jie-sspanel/sspanel/sspanel_custom_config.md)
-  * [对接V2ray](dui-jie-sspanel/sspanel/v2ray.md)
-  * [对接Trojan](dui-jie-sspanel/sspanel/trojan.md)
-  * [对接Shadowsocks](dui-jie-sspanel/sspanel/shadowsocks.md)
-  * [对接Shadowsocks - V2Ray-Plugin](dui-jie-sspanel/sspanel/dui-jie-shadowsocks-v2rayplugin.md)
+  * [对接 Custom Config](dui-jie-sspanel/sspanel/sspanel_custom_config.md)
 
 ## 对接V2board
 
