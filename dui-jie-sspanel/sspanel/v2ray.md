@@ -14,7 +14,7 @@ IP;监听端口;alterId;(tcp或ws);(tls或不填);path=/xxx|host=xxxx.com|server
 
 alterId设为0，则自动启用VMessAEAD。
 
-{% hint style="info" %} 注意：VMESS AEAD 将在 2022 年 1 月 1 日强制启用 请注意更新服务端配置，设置alterId = 0 {% endhint %}
+注意：VMESS AEAD 将在 2022 年 1 月 1 日强制启用 请注意更新服务端配置，设置alterId = 0
 
 ## tcp示例
 
