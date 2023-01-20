@@ -1,7 +1,7 @@
-# 对接V2ray
+# 对接V2ray (已废弃)
 
 {% hint style="info" %}
-在SSPanel-UIM 2022.12.1 版本之后的新订阅系统中，使用节点地址配置的方法已经被弃用，必须使用 [Custom Config](sspanel_custom_config.md) 配置方法。
+在SSPanel-UIM 2022.12.1 版本之后的新订阅系统中，使用节点地址配置的方法已经被弃用，必须使用 [Custom Config 配置方法](sspanel_custom_config.md)。
 {% endhint %}
 
 | 协议 | 支持情况 |

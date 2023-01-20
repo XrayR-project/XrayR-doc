@@ -1,4 +1,4 @@
-# 对接新版SSPanel Custom Config
+# 对接SSPanel Custom Config
 
 对于SSPanel-UIM >= 2021.11的版本中自动启用Custom_config的配置方法，请查看以下配置，正确配置节点信息。或者查看SSPanel相关文档：[https://wiki.sspanel.org/#/setup-custom-config](https://wiki.sspanel.org/#/setup-custom-config)。
 
