@@ -1,5 +1,9 @@
 # 对接Shadowsocks
 
+{% hint style="info" %}
+在SSPanel-UIM 2022.12.1 版本之后的新订阅系统中，使用节点地址配置的方法已经被弃用，必须使用 [Custom Config](sspanel_custom_config.md) 配置方法。
+{% endhint %}
+
 | 协议 | 支持情况 | 加密方法 |
 | :--- | :--- | :--- |
 | ShadowsocksAEAD | √ | aes-128-gcm, aes-256-gcm, chacha20-ietf-poly1305 |
