@@ -8,7 +8,7 @@
     "offset_port_user": "12345", //前端/订阅中下发的端口
     "offset_port_node": "12345", //节点服务器下发的端口
     "server_user": "hk.domain.com", //前端/订阅中下发的服务器地址
-    "mu_encryption": "chacha20-ietf-poly1305", // `aes-128-gcm`, `aes-256-gcm`, `chacha20-ietf-poly1305`三者之一
+    "mu_encryption": "chacha20-ietf-poly1305" // `aes-128-gcm`, `aes-256-gcm`, `chacha20-ietf-poly1305`三者之一
 }
 
 ```
@@ -23,11 +23,11 @@ alterId设为0，则自动启用VMessAEAD。
 
 ``` json
 {
-	"offset_port_node": 12345,
+	"offset_port_node": "12345",
 	"server_sub": "hk.domain.com",
 	"alter_id": 0,
 	"network": "tcp",
-	"security": "none",
+	"security": "none"
 }
 ```
 
@@ -35,7 +35,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ```json
 {
-	"offset_port_node": 12345,
+	"offset_port_node": "12345",
 	"server_sub": "hk.domain.com",
 	"alter_id": 0,
 	"network": "tcp",
@@ -57,12 +57,12 @@ alterId设为0，则自动启用VMessAEAD。
 
 ```json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"alter_id": 0,
 	"network": "tcp",
-	"security": "tls",
+	"security": "tls"
 }
 ```
 
@@ -70,7 +70,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ```json
 {
-	"offset_port_node": 80,
+	"offset_port_node": "80",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"alter_id": 0,
@@ -84,7 +84,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ```json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"alter_id": 0,
@@ -98,7 +98,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ```json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"alter_id": 0,
@@ -113,12 +113,12 @@ alterId设为0，则自动启用VMessAEAD。
 
 ``` json
 {
-	"offset_port_user": 8888,
+	"offset_port_user": "8888",
 	"offset_port_node": 12345,
 	"server_sub": "hk.domain.com",
 	"alter_id": 0,
 	"network": "tcp",
-	"security": "none",
+	"security": "none"
 }
 ```
 
@@ -129,7 +129,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ``` json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"alter_id": 0,
@@ -145,7 +145,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ``` json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"alter_id": 0,
@@ -161,7 +161,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ``` json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com"
 }
@@ -171,7 +171,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ``` json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"grpc": 1,
@@ -183,7 +183,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ``` json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"network": "ws",
@@ -195,7 +195,7 @@ alterId设为0，则自动启用VMessAEAD。
 在任一配置中设置`offset_port_user`为用户连接端口
 ``` json
 {
-	"offset_port_user": 443,
+	"offset_port_user": "443",
 	"offset_port_node": 12345,
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com"
@@ -209,7 +209,7 @@ alterId设为0，则自动启用VMessAEAD。
 
 ``` json
 {
-	"offset_port_node": 443,
+	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
 	"enable_xtls": 1
