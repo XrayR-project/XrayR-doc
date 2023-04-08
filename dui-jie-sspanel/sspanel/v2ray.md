@@ -34,10 +34,9 @@ ip;12345;0;tcp;;server=域名
 
 ## tcp+http示例
 
-注意sspanel并不支持此类订阅下发，此选项只供开启后端http混淆。
 
 ```text
-ip;12345;0;tcp;;server=域名;headertype=http
+ip;12345;0;tcp;;server=域名;headerType=http
 ```
 
 ```text
