@@ -25,7 +25,7 @@ alterId设为0，则自动启用VMessAEAD。
 {
 	"offset_port_node": "12345",
 	"server_sub": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "tcp",
 	"security": "none"
 }
@@ -37,7 +37,7 @@ alterId设为0，则自动启用VMessAEAD。
 {
 	"offset_port_node": "12345",
 	"server_sub": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "tcp",
 	"security": "none",
 	"header": {
@@ -60,7 +60,7 @@ alterId设为0，则自动启用VMessAEAD。
 	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "tcp",
 	"security": "tls"
 }
@@ -73,7 +73,7 @@ alterId设为0，则自动启用VMessAEAD。
 	"offset_port_node": "80",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "ws",
 	"security": "none",
 	"path": "/v2ray"
@@ -87,7 +87,7 @@ alterId设为0，则自动启用VMessAEAD。
 	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "ws",
 	"security": "tls",
 	"path": "/v2ray"
@@ -101,7 +101,7 @@ alterId设为0，则自动启用VMessAEAD。
 	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "grpc",
 	"security": "tls",
 	"servicename": "some_name"
@@ -114,9 +114,9 @@ alterId设为0，则自动启用VMessAEAD。
 ``` json
 {
 	"offset_port_user": "8888",
-	"offset_port_node": 12345,
+	"offset_port_node": "12345",
 	"server_sub": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "tcp",
 	"security": "none"
 }
@@ -125,17 +125,17 @@ alterId设为0，则自动启用VMessAEAD。
 此时用户连接端口为8888，节点监听端口为12345
 
 ## 启用vless
-在任一配置中设置`enable_vless: 1`为用户连接端口
+在任一配置中设置 `enable_vless: "1"` 为用户连接端口
 
 ``` json
 {
 	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "tcp",
 	"security": "tls",
-	"enable_vless": 1
+	"enable_vless": "1"
 }
 ```
 请开启vless同时务必使用tls或者xtls。
@@ -148,10 +148,10 @@ alterId设为0，则自动启用VMessAEAD。
 	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
-	"alter_id": 0,
+	"alter_id": "0",
 	"network": "tcp",
 	"security": "xtls",
-	"enable_vless": 1
+	"enable_vless": "1"
 }
 ```
 
@@ -174,7 +174,7 @@ alterId设为0，则自动启用VMessAEAD。
 	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
-	"grpc": 1,
+	"grpc": "1",
 	"servicename": "some_name"
 }
 ```
@@ -196,7 +196,7 @@ alterId设为0，则自动启用VMessAEAD。
 ``` json
 {
 	"offset_port_user": "443",
-	"offset_port_node": 12345,
+	"offset_port_node": "12345",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com"
 }
@@ -212,6 +212,6 @@ alterId设为0，则自动启用VMessAEAD。
 	"offset_port_node": "443",
 	"server_sub": "hk.domain.com",
 	"host": "hk.domain.com",
-	"enable_xtls": 1
+	"enable_xtls": "1"
 }
 ```
