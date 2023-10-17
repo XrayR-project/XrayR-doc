@@ -3,12 +3,13 @@
 对于SSPanel-UIM >= 2021.11的版本中自动启用Custom_config的配置方法，请查看以下配置，正确配置节点信息。或者查看SSPanel相关文档：[https://wiki.sspanel.org/#/custom-config](https://wiki.sspanel.org/#/custom-config)。
 
 # Shadowsocks
+
 ```json
 {
     "offset_port_user": "12345", //前端/订阅中下发的端口
     "offset_port_node": "12345", //节点服务器下发的端口
     "server_user": "hk.domain.com", //前端/订阅中下发的服务器地址
-    "mu_encryption": "chacha20-ietf-poly1305" // `aes-128-gcm`, `aes-256-gcm`, `chacha20-ietf-poly1305`三者之一
+    "method": "chacha20-ietf-poly1305" // `aes-128-gcm`, `aes-256-gcm`,`chacha20-ietf-poly1305`, `2022-blake3-aes-128-gcm`, `2022-blake3-aes-256-gcm`之一
 }
 
 ```
